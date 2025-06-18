@@ -1,0 +1,17 @@
+<section class="products-list">
+    <div class="product-list_card" *ngFor="let product of products">
+        <a routerLink="/products/{{product.id}}" class="product-list_link">
+            <img [src]="product.image" alt="" />
+            <h2 class="product-item_name">
+                {{ product.description }}
+            </h2>
+            <p class="product-item_price">
+                {{ product.price | currency: "BRL" }}
+            </p>
+            <p class="product-item_price-description">
+                {{ product.descriptionPrice }}
+            </p>
+        </a>
+        <button class="buy" (click)="addAndBuy(product)" class="product-item_buy-button" type="button">Comprar</button>
+    </div>
+</section>

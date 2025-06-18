@@ -1,0 +1,20 @@
+<header>
+    <h1>
+        <a routerLink="/" class="logo">
+            <span class="riso">Riso</span><span class="flora">flora</span>
+        </a>
+    </h1>
+    <div class="container_menu">
+        <nav>
+            <ul>
+                <li><a routerLink="/products">Produtos</a></li>
+                <li><a routerLink="/contact">Contato</a></li>
+                <li><a routerLink="/cart"><i class="fa-solid fa-cart-shopping"> {{ cartService.getCart().length }}</i></a></li>
+                <li><a href="https://www.instagram.com/riso.floraa/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100067608400646&locale=pt_BR"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="/"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </nav>
+        <app-search-bar></app-search-bar>
+    </div>
+</header>

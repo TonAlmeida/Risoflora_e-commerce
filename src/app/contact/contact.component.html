@@ -1,0 +1,95 @@
+<h2 class="contact-title">Entre em contato</h2>
+<section class="contact_container">
+    <form (submit)="submitForm()" class="contact-form" [formGroup]="contactForm">
+        <label for="name">Nome*</label>
+        <input
+        formControlName="name"
+        [class.valid]="contactForm.controls['name'].valid"
+        [class.invalid]="contactForm.controls['name'].invalid && (contactForm.controls['name'].touched || contactForm.controls['name'].dirty)" 
+        id="name"
+        type="text"
+        placeholder="Digite o seu nome...">
+        <div *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].touched || contactForm.controls['name'].dirty)">
+            <small class="error-message" *ngIf="contactForm.controls['name'].hasError('minlength')">
+                Esse campo precisa ter no mínimo 4 caracteres
+            </small>
+            <small class="error-message" *ngIf="contactForm.controls['name'].hasError('required')">
+                Esse campo precisa ser preenchido
+            </small>
+        </div>
+
+        <label for="subject">Assunto*</label>
+        <input
+        formControlName="subject"
+        required id="subject"
+        type="assunto"
+        placeholder="Digite o assunto..."
+        [class.valid]="contactForm.controls['subject'].valid"
+        [class.invalid]="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty)">
+        <div *ngIf="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty)">
+            <small class="error-message" *ngIf="contactForm.controls['subject'].hasError('minlength')">
+                Esse campo precisa ter no mínimo 10 caracteres
+            </small>
+            <small class="error-message" *ngIf="contactForm.controls['subject'].hasError('required')">
+                Esse campo precisa ser preenchido
+            </small>
+        </div>
+
+        <label for="whats">WhatsApp*</label>
+        <input
+        mask="(00) 0 0000-0000"
+        formControlName="whats"
+        required id="whats"
+        type="whats"
+        placeholder="(00) 0 0000-0000"
+        [class.valid]="contactForm.controls['whats'].valid"
+        [class.invalid]="contactForm.controls['whats'].invalid && (contactForm.controls['whats'].touched || contactForm.controls['subject'].dirty)">
+        <div *ngIf="contactForm.controls['whats'].invalid && (contactForm.controls['whats'].touched || contactForm.controls['whats'].dirty)">
+            <small class="error-message" *ngIf="contactForm.controls['whats'].hasError('minlength')">
+                Esse campo precisa ter no mínimo 11 caracteres
+            </small>
+            <small class="error-message" *ngIf="contactForm.controls['whats'].hasError('required')">
+                Esse campo precisa ser preenchido
+            </small>
+        </div>
+
+        <label for="email">E-mail*</label>
+        <input
+        formControlName="email"
+        required id="email"
+        type="email"
+        placeholder="Digite o seu email..."
+        [class.valid]="contactForm.controls['email'].valid"
+        [class.invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty)">
+        <div *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty)">
+            <small class="error-message" *ngIf="contactForm.controls['email'].hasError('email')">
+                Esse campo precisa ter um email válido
+            </small>
+            <small class="error-message" *ngIf="contactForm.controls['email'].hasError('required')">
+                Esse campo precisa ser preenchido
+            </small>
+        </div>
+
+
+        <textarea
+        rows="3"
+        formControlName="message"
+        [class.valid]="contactForm.controls['message'].valid"
+        [class.invalid]="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['subject'].dirty)">
+        ></textarea>
+        <div *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['message'].dirty)">
+            <small class="error-message" *ngIf="contactForm.controls['message'].hasError('minlength')">
+                Esse campo precisa ter no mínimo 20 caracteres
+            </small>
+            <small class="error-message" *ngIf="contactForm.controls['message'].hasError('required')">
+                Esse campo precisa ser preenchido
+            </small>
+        </div>
+
+        <button [disabled]="contactForm.invalid" class="submit" type="submit">Enviar</button>
+    </form>
+    <address>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31048.828920502016!2d-44.211924889680105!3d-13.405910614838469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7593dccd43fe909%3A0xb1762e0894a5da48!2sS%C3%A3o%20F%C3%A9lix%20do%20Coribe%2C%20BA%2C%2047665-000!5e0!3m2!1spt-BR!2sbr!4v1750118681321!5m2!1spt-BR!2sbr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        Rua do nada, n zero
+    </address>
+</section>

@@ -1,0 +1,24 @@
+<h2 class="cart-title">Carrinho</h2>
+<div *ngIf="cartItems.length > 0; else WithoutProducts ">
+    <ul>
+        <li class="item" *ngFor="let item of cartItems">
+            <img [src]="item.image" alt="">
+            <div class="price-qtd_container">
+                <p>{{item.description}}</p>
+                <p>Preço: {{item.price | currency: "BRL"}}</p>
+                <label>
+                    Quantidade
+                    <input min="1" type="number" [(ngModel)]="item.qtd" (change)="calcTotal()">
+                </label>
+            </div>
+            <button (click)="removeCartItem(item.id)" class="remove-button"><i class="fa-solid fa-xmark"></i></button>
+        </li>
+    </ul>
+    <div class="total_container">
+        <h2 class="cart-total">Total: <span>{{total | currency: "BRL"}}</span></h2>
+        <button class="buy-button" (click)="buy()">Comprar</button>
+    </div>
+</div>
+<ng-template #WithoutProducts>
+    <p class="noOne">Nenhum item adicionado ao carrginho :/</p>
+</ng-template>
