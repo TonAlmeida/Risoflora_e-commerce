@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IcartProduct, IProduct } from '../products';
+import { IProduct } from '../products';
 import { ProductsService } from '../products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from '../cart.service';
@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private productsService: ProductsService,
-    private cartService: CartService,
+    public cartService: CartService,
     private router: ActivatedRoute,
     private Router: Router
   ) { }
@@ -34,11 +34,8 @@ export class ProductsComponent implements OnInit {
     })
   }
 
-  addAndBuy(product: IProduct) {
-    if(product) {
-      const Product = {...product, qtd: 1};
-      this.cartService.addToCart(Product);
-    }
+  add(product: IProduct){
+    this.cartService.addToCart({...product, qtd: 1});
     this.Router.navigate(['cart']);
   }
 }

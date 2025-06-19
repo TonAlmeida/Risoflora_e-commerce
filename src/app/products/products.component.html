@@ -1,4 +1,4 @@
-<section class="products-list">
+<section *ngIf="(products != undefined && products.length > 1) else NoProducts" class="products-list">
     <div class="product-list_card" *ngFor="let product of products">
         <a routerLink="/products/{{product.id}}" class="product-list_link">
             <img [src]="product.image" alt="" />
@@ -12,6 +12,11 @@
                 {{ product.descriptionPrice }}
             </p>
         </a>
-        <button class="buy" (click)="addAndBuy(product)" class="product-item_buy-button" type="button">Comprar</button>
+        <button class="buy" (click)="add(product)" class="product-item_buy-button" type="button">Comprar</button>
     </div>
 </section>
+<ng-template #NoProducts>
+    <div class="NoProducts">
+        Nenhum produto corresponde a pesquisa :/
+    </div>
+</ng-template>

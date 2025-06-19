@@ -30,12 +30,12 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart() {
-    this.notificationService.notification("o produto foi adicionado no carrinho");
+    this.notificationService.notification("O produto foi adicionado no carrinho");
     const product: IcartProduct = {
       ...this.product!,
       qtd: this.qtd
     }
-    this.cartService.addToCart(product)
+    this.cartService.addToCart(product);
   }
 
 }

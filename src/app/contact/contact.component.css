@@ -1,6 +1,9 @@
 
 .contact-title{
-    font-size: 22px;
+    font-size: 44px;
+    color: var(--gray);
+    font-weight: 700;
+    padding: 8px 0;
 }
 .contact_container{
     padding: 20px;
