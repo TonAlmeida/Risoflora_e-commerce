@@ -47,7 +47,7 @@
 
     cursor: pointer;
 }
-@media(min-width: 350px) {
+@media(max-width: 500px) {
     .product_container{
         flex-direction: column;
     }

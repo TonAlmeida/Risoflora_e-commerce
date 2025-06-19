@@ -12,7 +12,7 @@ export interface IcartProduct extends IProduct {
     qtd: number;
 }
 
-export const products = [
+export const products: IProduct[] = [
   { id: 1, description: "Lavanda", price: 58.00, descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 130 },
   { id: 2, description: "Hortelã", price: 45.00, descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 90 },
   { id: 3, description: "Alecrim", price: 52.00, descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 75 },

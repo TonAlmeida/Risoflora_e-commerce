@@ -64,9 +64,9 @@
 .product-item_buy-button:hover{
     background-color: rgb(17, 185, 17);
 }
-.NoProducts{
-    width: 100%;
+.NoOne{
     text-align: center;
-
-    color: red;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }

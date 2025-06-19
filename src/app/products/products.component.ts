@@ -22,16 +22,18 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     const products = this.productsService.getAll();
+
     this.router.queryParamMap.subscribe(params => {
       const description = params.get('description')?.toLowerCase();
 
-      if(description) {
-        this.products = products.filter(product => product.description.toLowerCase().includes(description));
-        return;
+      if (description) {
+        this.products = products.filter(product =>
+          product.description?.toLowerCase().includes(description)
+        );
+      } else {
+        this.products = products;
       }
-
-      this.products = products;
-    })
+    });
   }
 
   add(product: IProduct){

@@ -7,7 +7,7 @@ import { products } from './products';
 })
 export class ProductsService {
 
-  products: IProduct[] = products
+  products: IProduct[] = products;
 
   constructor() { }
 
