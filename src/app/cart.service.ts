@@ -8,6 +8,7 @@ import { NotificationService } from './notification.service';
 })
 export class CartService {
 
+  total = 0;
   private items = new BehaviorSubject<IcartProduct[]>(this.loadCart());
   cartItems$ = this.items.asObservable();
 
@@ -33,18 +34,19 @@ export class CartService {
   }
 
   // add item in cart or increase amout if alrady exist
-  addToCart(product: IcartProduct) {
+  addToCart(product: IcartProduct, amount: number = 1) {
     let existProduct: IcartProduct | undefined = this.items.value.find(item => item.id === product.id);
     if(existProduct) {
       existProduct = {
         ...existProduct,
-        qtd: existProduct.qtd += 1};
+        qtd: existProduct.qtd += amount};
       this.items.next([...this.items.value]);
     } else {
       const newProduct = [...this.items.value, product];
       this.items.next(newProduct);
     }
     this.updateLocalStorage();
+    this.calcTotal();
     this.notificationService.notification("O produto foi adicionado no carrinho")
   }
 
@@ -65,5 +67,11 @@ export class CartService {
   buy() {
     alert("Parabéns! Você finalizou a sua compra.");
     this.clearCart();
+  }
+
+  // calc total value
+  calcTotal(){
+    this.loadCart(); //just in case
+    return this.items.value.reduce((total, item) => total + (item.price * item.qtd), 0);
   }
 }

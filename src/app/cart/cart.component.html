@@ -8,7 +8,7 @@
                 <p>Preço: {{item.price | currency: "BRL"}}</p>
                 <label>
                     Quantidade
-                    <input min="1" type="number" [(ngModel)]="item.qtd" (change)="calcTotal()">
+                    <input min="1" type="number" [(ngModel)]="item.qtd" (change)="cartService.calcTotal()">
                 </label>
             </div>
             <button (click)="cartService.removeCartItem(item.id)" class="remove-button"><i class="fa-solid fa-xmark"></i></button>

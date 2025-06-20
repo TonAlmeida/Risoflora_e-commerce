@@ -23,6 +23,9 @@
     justify-content: space-around;
     flex: 1;
 }
+.details{
+    text-align: justify;
+}
 .product_price{
     color: var(--cor-laranja);
     font-size: x-large;

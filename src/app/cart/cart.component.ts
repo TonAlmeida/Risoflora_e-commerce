@@ -1,7 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { CartService } from '../cart.service';
 import { IcartProduct } from '../products';
-import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit, OnDestroy {
+export class CartComponent implements OnInit, OnDestroy, OnChanges {
 
   total: number = 0;
   cartItems: IcartProduct[] = [];
@@ -17,25 +16,23 @@ export class CartComponent implements OnInit, OnDestroy {
 
   constructor(
     public cartService: CartService,
-    private router: Router
   ) { }
 
   ngOnInit(): void {
     const sub = this.cartService.cartItems$.subscribe(items => {
       this.cartItems = items;
-      this.calcTotal();
+      this.total = this.cartService.calcTotal();
     });
 
     this.subcriptions.add(sub);
   }
 
-  ngOnDestroy(): void {
-    this.subcriptions.unsubscribe();
+  ngOnChanges(changes: SimpleChanges): void {
+    // this.total = this.cartService.calcTotal();
+    console.log('mudou aqui')
   }
 
-  calcTotal(){
-    this.cartItems.map(item => {
-      this.total += (item.price * item.qtd)
-    })
+  ngOnDestroy(): void {
+    this.subcriptions.unsubscribe();
   }
 }
