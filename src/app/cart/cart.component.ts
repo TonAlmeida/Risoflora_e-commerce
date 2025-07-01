@@ -28,8 +28,7 @@ export class CartComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    // this.total = this.cartService.calcTotal();
-    console.log('mudou aqui')
+    this.total = this.cartService.calcTotal();
   }
 
   ngOnDestroy(): void {

@@ -39,7 +39,8 @@ export class CartService {
     if(existProduct) {
       existProduct = {
         ...existProduct,
-        qtd: existProduct.qtd += amount};
+        qtd: existProduct.qtd += amount
+      };
       this.items.next([...this.items.value]);
     } else {
       const newProduct = [...this.items.value, product];
@@ -74,4 +75,17 @@ export class CartService {
     this.loadCart(); //just in case
     return this.items.value.reduce((total, item) => total + (item.price * item.qtd), 0);
   }
+
+  cartInputChange(item: IcartProduct){
+    let product = this.items.value.find(i => i.id === item.id);
+    if(product) {
+      product = {
+        ...product,
+        qtd: item.qtd
+      }
+      this.items.next([...this.items.value]);
+    }
+  }
+
+
 }
