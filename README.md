@@ -7,7 +7,7 @@ This is the repository for **Risoflora E-commerce**, an online store focused on 
 
 ## About the Project
 
-Risoflora is an e-commerce site developed to provide a simple and intuitive experience for customers looking for quality natural products. The site features product listings, filtering, shopping cart, and integrated payment system.
+Risoflora is an e-commerce site developed to provide a simple and intuitive experience for customers looking for quality natural products. The site features product listings, filtering, shopping cart.
 
 ---
 
@@ -16,8 +16,6 @@ Risoflora is an e-commerce site developed to provide a simple and intuitive expe
 - Angular (front-end)
 - TypeScript
 - HTML5 / CSS3
-- REST API (backend — if applicable)
-- Mercado Pago (payment integration)
 
 ---
 
@@ -27,8 +25,6 @@ Risoflora is an e-commerce site developed to provide a simple and intuitive expe
 - Individual product details
 - Dynamic shopping cart
 - Quantity control with max limit based on stock
-- Checkout with integrated payment system
-- Order status pages (success, error, pending)
 
 
 
