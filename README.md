@@ -7,7 +7,7 @@ This is the repository for **Risoflora E-commerce**, an online store focused on 
 
 ## About the Project
 
-Risoflora is an e-commerce site developed to provide a simple and intuitive experience for customers looking for quality natural products. The site features product listings, filtering, shopping cart.
+Risoflora is an e-commerce site developed to provide a simple and intuitive experience for customers looking for quality natural products. The site features product listings, filtering and shopping cart.
 
 ---
 
