@@ -1,7 +1,7 @@
 
 # Risoflora E-commerce
 
-This is the repository for **Risoflora E-commerce**, an online store focused on healthy and natural products. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+This is the repository for **Risoflora E-commerce**, an online store focused on healthy and natural products. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13. The web site is available on [risofloraEcommerce](https://risoflora-e-commerce-v4p7.vercel.app/products)
 
 ---
 
