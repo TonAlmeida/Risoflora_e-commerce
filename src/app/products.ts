@@ -15,7 +15,7 @@ export interface IcartProduct extends IProduct {
 }
 
 export const products: IProduct[] = [
-  { id: 1, description: "Lavanda", price: 58.00, details: "um produto muito bom que serve para muitas coisas de saúde que são incrivelmente importantes para a sobrevivência do indivídui. Estudos comprovam que sem saúde o infeliz vive muito menos que uma pessoa com boa saúde", category: "planta", descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 130 },
+  { id: 1, description: "Lavanda", price: 58.00, details: "um produto muito bom que serve para muitas coisas de saúde que são incrivelmente importantes para a sobrevivência do indivídui. Estudos comprovam que sem saúde o infeliz vive muito menos que uma pessoa com boa saúde", category: "planta", descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 2 },
   { id: 2, description: "Hortelã", price: 45.00, details: "um produto muito bom", category: "planta", descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 90 },
   { id: 3, description: "Alecrim", price: 52.00, details: "um produto muito bom", category: "planta", descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 75 },
   { id: 4, description: "Manjericão", price: 48.00, details: "um produto muito bom", category: "planta", descriptionPrice: "À vista no PIX", image: "/assets/lavanda.jpeg", stockQtd: 60 },

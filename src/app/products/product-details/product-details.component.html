@@ -1,4 +1,4 @@
-<!--Início do caroucel-->
+<!--start of carroucel-->
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -45,7 +45,7 @@
   </button>
 </div>
 
-<!--Fim do caroucel-->
+<!--end of carroucel-->
 
 <section class="product_container">
     <div class="product-image_container">
@@ -58,7 +58,7 @@
         <p>{{product?.descriptionPrice}}</p>
         <label>
             Quantidade:
-            <input [(ngModel)]="qtd" min={1} class="quantity" type="number">
+            <input [(ngModel)]="qtd" min="1" [max]="product ? product.stockQtd : 1" class="quantity" type="number">
             unidade(s)
         </label>
         <p class="product_avaiability">

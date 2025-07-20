@@ -2,16 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 10px;
+    gap: 5px;
 }
 .product-list_card{
     text-align: center;
     text-overflow: ellipsis;
-    
-    margin: 5px;
-    width: 150px;
-    height: 270px;
+
+    width: 250px;
+    height: 380px;
     padding: 5px;
+    border-radius: 3px;
     overflow: hidden;
 
     background-color: rgb(243, 243, 243);
@@ -24,9 +24,10 @@
     color: black;
 }
 .product-list_link>img{
-    width: 140px;
-    height: 130px;
+    width: 240px;
+    height: 240px;
     margin-bottom: 10px;
+    border-radius: 3px;
 }
 .product-item_name{
     font-family: Arial, Helvetica, sans-serif;
@@ -69,4 +70,15 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-size: 20px;
+}
+
+@media(max-width: 450px) {
+    .product-list_card{
+        width: 190px;
+        height: 320px;
+    }
+    .product-list_link>img{
+        width: 180px;
+        height: 180px;
+    }
 }
