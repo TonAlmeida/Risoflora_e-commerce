@@ -1,27 +1,34 @@
-# Risoflora
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+# Risoflora E-commerce
 
-## Development server
+This is the repository for **Risoflora E-commerce**, an online store focused on healthy and natural products. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## About the Project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Risoflora is an e-commerce site developed to provide a simple and intuitive experience for customers looking for quality natural products. The site features product listings, filtering, shopping cart, and integrated payment system.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technologies Used
 
-## Running unit tests
+- Angular (front-end)
+- TypeScript
+- HTML5 / CSS3
+- REST API (backend — if applicable)
+- Mercado Pago (payment integration)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Features
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Product listing and filtering
+- Individual product details
+- Dynamic shopping cart
+- Quantity control with max limit based on stock
+- Checkout with integrated payment system
+- Order status pages (success, error, pending)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
