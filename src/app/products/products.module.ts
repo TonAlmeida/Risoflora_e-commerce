@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ProductsRoutingModule,
     FormsModule
+  ],
+  exports: [
+    ProductsComponent
   ]
 })
 export class ProductsModule { }

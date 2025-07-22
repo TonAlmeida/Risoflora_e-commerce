@@ -1,0 +1,32 @@
+.categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin-bottom: 50px;
+}
+.category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 14vw;
+    height: 14vw;
+
+    cursor: pointer;
+}
+.category:hover{
+    transform: scale(1.01);
+}
+.category>img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.category>p{
+    margin: 0;
+    margin-top: 10px;
+}

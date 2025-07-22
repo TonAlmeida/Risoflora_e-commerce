@@ -72,13 +72,13 @@
     font-size: 20px;
 }
 
-@media(max-width: 450px) {
+@media(max-width: 530px) {
     .product-list_card{
-        width: 190px;
-        height: 320px;
+        width: 150px;
+        height: 270px;
     }
     .product-list_link>img{
-        width: 180px;
-        height: 180px;
+        width: 140px;
+        height: 140px;
     }
 }
