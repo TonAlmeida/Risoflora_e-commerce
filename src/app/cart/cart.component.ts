@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { CartService } from '../cart.service';
-import { IcartProduct } from '../products';
+import { IcartProduct, products } from '../products';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -34,4 +34,21 @@ export class CartComponent implements OnInit, OnDestroy, OnChanges {
   ngOnDestroy(): void {
     this.subcriptions.unsubscribe();
   }
+
+  //Contact with whatsapp
+  contact() {
+    const number = '+5577999397911';
+
+    let message = 'Olá, gostaria de fazer o pedido:\n';
+    this.cartItems.forEach(item => {
+      message += `- ${item.description} (x${item.qtd})\n`;
+    });
+    message += `Total: R$${this.total}`;
+
+    const urlWhats = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+
+    this.cartService.buy();
+    window.open(urlWhats, '_blank');
+  }
+
 }
